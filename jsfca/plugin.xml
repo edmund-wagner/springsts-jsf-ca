@@ -7,5 +7,19 @@
             factory="jsfca.SpringBeanProviderFactory">
       </symbolSourceId>
    </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="jsfca.preferences.JsfcaPreferencePage"
+            id="jsfca.preferences.JsfcaPreferencePage"
+            name="Jsf Content Assist">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="jsfca.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
 
 </plugin>
